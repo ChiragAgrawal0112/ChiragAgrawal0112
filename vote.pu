@@ -1,0 +1,31 @@
+BJP = 0
+CONGRESS = 0
+SP = 0
+AAP = 0
+while True:
+    name = input("Enter your name ")
+    age = int(input("Enter your age "))
+    
+    if age >= 18:
+        print("you're eligible for vote")
+        print("1. BJP\n2.CONGRESS\n3. SP\n4. AAP")
+        choice = input("Enter the name of the party you want to give vote ")
+       
+        if choice == 'BJP':
+            BJP += 1
+        elif choice == 'CONGRESS':
+            CONGRESS += 1
+        elif choice == 'SP':
+            SP += 1
+        elif choice == 'AAP':
+            AAP += 1
+        else:
+            print("Please provide the info correctly")
+    else:
+        print("Not eligible to vote")
+    
+    more = input("Do you want to give a vote to this party(Type 'Y' for yes and 'N' for no): ")
+    if more== 'Y':
+        continue
+    elif more=='N':
+        break

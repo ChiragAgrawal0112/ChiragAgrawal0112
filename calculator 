@@ -1,1 +1,41 @@
-Real
+import java.util.Scanner;
+import java.io.* ;
+
+public class calculator {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+         
+        System.out.println("Enter value num1:");
+        double num1 = sc.nextDouble();
+        System.out.println("Enter value num2:");
+        double num2 = sc.nextDouble();
+
+        System.out.println("Enter value Operator('+','-','*','/'):");
+        String operater = sc.next();
+        double out = 0 ;
+
+        switch(operater){
+        case "+" :
+         out = num1 + num2 ;
+         break;
+
+        case "-":
+         out = num1 - num2 ;
+         break;
+
+        case "*":
+         out = num1 * num2 ;
+         break;
+
+        case "/" :
+         out = num1 / num2 ;
+         break;
+
+        default :
+         System.out.println("your input is wrong.");
+        }
+        System.out.print(num1 +" "+ operater + " "+ num2 + "=" + out);
+        sc.close();
+    }
+    
+}
